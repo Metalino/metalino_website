@@ -1,0 +1,68 @@
+.lander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh; /* to avoid overlap with fixed navbar */
+  height: 60vh; /* full screen section */
+  background: #000; /* optional background */
+}
+
+.gif-container {
+  position: relative;
+  display: inline-block;
+}
+
+.gif-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Social icons container */
+.social-icons {
+  position: absolute;
+  bottom: 10px; /* place near bottom of gif */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+/* Style each icon */
+.social-icons a {
+  color: #faed25;
+  font-size: 1.5rem;
+  background-color: #000;
+  width: 40px;              /* fixed size */
+  height: 40px;             /* same as width = perfect circle */
+  display: flex;            /* center icon */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;       /* makes it circular */
+  transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  color: #fff;
+  background: #e1c44f;
+  transform: scale(1.1);
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gif-container {
+    height: 70vh;
+  }
+  .gif-container img {
+    height: 70vh;
+    max-width: auto;
+    object-fit: cover;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}

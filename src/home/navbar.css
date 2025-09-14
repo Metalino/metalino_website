@@ -1,0 +1,138 @@
+/* 🔹 Base container */
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 0 0;
+  background: #000;
+  position: fixed; /* stays on top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5); /* subtle depth */
+}
+
+/* 🔹 Logo */
+.logo {
+  height: 45px;
+  cursor: pointer;
+  padding-left: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Desktop Menu */
+.navbar {
+  margin-right: 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar li {
+  color: #faed25;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect with underline animation */
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #faed25;
+  transition: width 0.3s ease;
+}
+
+.navbar li:hover {
+  color: #fff;
+}
+
+.navbar li:hover::after {
+  width: 80%;
+}
+
+/* 🔹 Hamburger icon */
+.hamburger {
+  display: none;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #faed25;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger to X when active */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 🔹 Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 10vh;
+    right: -30px;
+    width: 80%;
+    height: 0;
+    background: #000000;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.4s ease;
+  }
+
+  .navbar.open {
+    height: auto; /* smooth dropdown */
+    padding-top: 1rem;
+    padding-bottom: 40px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .navbar li {
+    margin-left: 2rem;
+    font-size: 1rem;
+    color: #faed25;
+    
+  }
+
+  .navbar li:hover {
+    color: #fff;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
