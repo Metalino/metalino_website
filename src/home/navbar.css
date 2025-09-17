@@ -28,13 +28,13 @@
 
 /* 🔹 Desktop Menu */
 .navbar {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .navbar li {

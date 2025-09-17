@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './home/navbar.jsx'
 import Lander from './home/lander.jsx'
+import AboutSection from './home/about.jsx'
 
 function App() {
   return (
     <div id="root">
       <Navbar />
       <Lander />
-      
+      <AboutSection />
     </div>
   )
 }
