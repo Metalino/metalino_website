@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './home/navbar.jsx'
 import Lander from './home/lander.jsx'
 import AboutSection from './home/about.jsx'
+import Footer from './home/footer.jsx'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Lander />
       <AboutSection />
+      <Footer />
     </div>
   )
 }
