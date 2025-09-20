@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./navbar.css";
+import  logo from "../assets/logo.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="navbar-container">
-      <img src="/logo.svg" className="logo" alt="Logo" />
+      <img src={logo} className="logo" alt="Logo" />
 
       {/* Hamburger icon */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>

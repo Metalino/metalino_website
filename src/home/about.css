@@ -5,9 +5,9 @@
   margin-top: 10vh; 
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #000000, #272729);
+  background: #121212;
   color: white;
-  padding: 60px 20px;
+  padding: 60px 0px;
 }
 
 .about-container {
@@ -71,6 +71,9 @@
 
 .about-image img {
   width: 100%;
+  max-width: 500px;   /* keeps it from being too large */
+  margin: 0 auto;     /* centers it in its grid cell */
+  display: block;     /* removes inline spacing */
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transition: 0.4s;

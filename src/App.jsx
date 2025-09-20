@@ -6,6 +6,9 @@ import Navbar from './home/navbar.jsx'
 import Lander from './home/lander.jsx'
 import AboutSection from './home/about.jsx'
 import Footer from './home/footer.jsx'
+import YouTubeSection from './home/videosection.jsx'
+import Services from './home/services.jsx'
+
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
       <Navbar />
       <Lander />
       <AboutSection />
+      <Services />
+      <YouTubeSection />
       <Footer />
     </div>
   )

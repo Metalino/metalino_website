@@ -1,0 +1,179 @@
+.services-section {
+  padding: 40px 20px;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.services-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80px;
+  margin: 12px auto 0;
+  background: #ffd93d;
+  border-radius: 4px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px 25px;
+  color: #fff;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+  min-height: 220px;
+  font-family: 'inter', sans-serif;
+}
+
+.service-card .icon {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #ffd93d;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.service-card:hover .icon {
+  transform: rotate(10deg) scale(1.2);
+  color: hsl(54, 100%, 65%);
+}
+
+/* Mobile carousel effect */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 0; /* Remove horizontal padding */
+  }
+
+  .services-title {
+    font-size: 2rem;
+    padding: 0 20px; /* Add padding to title */
+  }
+
+  .services-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: none;
+    margin: 0;
+    padding-bottom: 20px; /* Space for scrollbar if visible */
+  }
+
+  .service-card {
+    flex-shrink: 0;
+    width: 280px; /* Fixed width for consistent carousel */
+    min-width: 280px;
+    padding: 30px 20px;
+    min-height: 200px;
+    scroll-snap-align: center;
+    transform: scale(0.95);
+    opacity: 0.7;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Center card effect - appears larger and more prominent */
+  .service-card.center {
+    transform: scale(1);
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .service-card .icon {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .services-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Add scroll indicators */
+  .services-section::after {
+    content: "← Swipe to explore →";
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-top: 20px;
+    font-style: italic;
+  }
+}
+
+/* Alternative: Staggered animation effect on scroll */
+@media (max-width: 768px) {
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(0.95);
+    }
+  }
+
+  .service-card {
+    animation: slideInFromRight 0.6s ease-out;
+  }
+
+  .service-card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .service-card:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .service-card:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  .service-card:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+
+  .service-card:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+}

@@ -5,17 +5,20 @@ import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer">
+    <div className="contactbtn">
+        <button className="contact-btn">Contact Us</button>
+    </div>
       <div className="footer-container">
         {/* Column 1 */}
         <div className="footer-column">
-          <h3>About</h3>
+          <h3>Our Address</h3>
           <p>
-            Building modern web apps, exploring cybersecurity, and 
-            blending creativity with technology.
+            No 5, 8th Cross St, Okkiayam, Thouraipakkam, Andal Nagar, Adambakkam, Chennai, Tamil Nadu 600088, India
           </p>
         </div>
-
+        
         {/* Column 2 */}
+        
         <div className="footer-column">
           <h3>Quick Links</h3>
           <ul>
@@ -25,16 +28,18 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3 */}
+        
+      </div>
+
+      
+        {/* Column 2 */}
         <div className="footer-column">
-          <h3>Follow Me</h3>
           <div className="socials">
-            <a href="#"><FaTwitter /> Twitter</a>
-            <a href="#"><FaLinkedin /> LinkedIn</a>
-            <a href="#"><FaInstagram /> Instagram</a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaLinkedin /> </a>
+            <a href="https://www.instagram.com/metalino.madras?utm_source=ig_web_button_share_sheet&igsh=MWlicXV2ZmIzcTFvYg=="><FaInstagram /> </a>
           </div>
         </div>
-      </div>
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Metalino. All rights reserved.</p>

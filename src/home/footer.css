@@ -2,15 +2,16 @@
   background: #000;
   color: #fff;
   padding: 40px 20px 20px;
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  /* about left, links right */
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  margin-left: 25%;
   gap: 40px;
 }
 
@@ -51,23 +52,66 @@
   color: #faed25;
 }
 
+/* Socials below columns */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0;
+}
+
 .socials a {
-  display: block;
-  margin: 6px 0;
   text-decoration: none;
   color: #bbb;
   transition: color 0.3s;
+  font-size: 1.4rem;
 }
 
-.socials a:hover {
+.socials a:hover::after {
   color: #ffee00;
+  transform: scale(1.1);
 }
 
+/* Contact button centered */
+.contactbtn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  background-color: #d1c40f;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #faed25;
+  transform: scale(1.05);
+}
+
+/* Footer bottom text */
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   border-top: 1px solid #333;
   padding-top: 15px;
   font-size: 0.9rem;
   color: #777;
+}
+
+/* Responsive: stack columns */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+
 }
