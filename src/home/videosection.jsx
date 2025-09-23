@@ -8,25 +8,37 @@ const YouTubeSection = () => {
       <div className="youtube-grid">
         <div className="youtube-card">
           <iframe
-            src="https://www.youtube.com/embed/abcd1234"
-            title="YouTube video 1"
+            src="https://youtube.com/embed/dJebcmKZ5gI"
+            title="YouTube video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
+        
         <div className="youtube-card">
           <iframe
-            src="https://www.youtube.com/embed/efgh5678"
-            title="YouTube video 2"
+            src="https://www.youtube.com/embed/kYU2erRrs0w"
+            title="YouTube video 3"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
+        
         <div className="youtube-card">
           <iframe
-            src="https://www.youtube.com/embed/ijkl9012"
+            src="https://www.youtube.com/embed/O8_h-uInRt0"
+            title="YouTube video 3"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        
+        <div className="youtube-card">
+          <iframe
+            src="https://www.youtube.com/embed/7e2ZhXDO_dE"
             title="YouTube video 3"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

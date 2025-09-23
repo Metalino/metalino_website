@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import  logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +18,13 @@ const Navbar = () => {
       </div>
 
       <nav className={`navbar ${isOpen ? "open" : ""}`}>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+      <ul>
+        <li><Link to="metalino/">Home</Link></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
+    </nav>
     </div>
   );
 };

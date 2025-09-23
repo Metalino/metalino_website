@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && copy dist\\index.html dist\\404.html",
+    "build": "vite build && cp dist/index.html dist/404.html || copy dist\\index.html dist\\404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
@@ -14,7 +14,8 @@
     "framer-motion": "^6.5.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

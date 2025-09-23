@@ -1,26 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './home/navbar.jsx'
-import Lander from './home/lander.jsx'
-import AboutSection from './home/about.jsx'
-import Footer from './home/footer.jsx'
-import YouTubeSection from './home/videosection.jsx'
-import Services from './home/services.jsx'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
+import Navbar from "./home/navbar.jsx";
+import Lander from "./home/lander.jsx";
+import AboutSection from "./home/about.jsx";
+import Footer from "./home/footer.jsx";
+import YouTubeSection from "./home/videosection.jsx";
+import Services from "./home/services.jsx";
+import Contact from "./contact/contact.jsx";
 
-function App() {
+function HomePage() {
   return (
-    <div id="root">
+    <>
       <Navbar />
       <Lander />
       <AboutSection />
       <Services />
       <YouTubeSection />
       <Footer />
-    </div>
-  )
+    </>
+  );
 }
 
-export default App
+function ContactPage() {
+  return (
+    <>
+      <Navbar />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router basename="/metalino">
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/contact" element={<ContactPage/>} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
