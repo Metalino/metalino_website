@@ -8,7 +8,7 @@
     "build": "vite build && cp dist/index.html dist/404.html || copy dist\\index.html dist\\404.html",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist --dotfiles --add"
   },
   "dependencies": {
     "framer-motion": "^6.5.1",

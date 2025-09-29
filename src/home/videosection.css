@@ -1,7 +1,8 @@
 .youtube-section {
   padding: 60px 20px;
-  background: #111111;
+  background: #000000;
   text-align: center;
+  position: relative;
 }
 
 .youtube-title {
@@ -20,16 +21,26 @@
   border-radius: 2px;
 }
 
+.youtube-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .youtube-grid {
   display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 20px;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
 }
 
 /* Card styles */
 .youtube-card {
-  flex: 1 1 300px;
+  flex: 0 0 300px;
   max-width: 300px;
   aspect-ratio: 9 / 16;
   border-radius: 12px;
@@ -37,7 +48,7 @@
   background: #000;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
   transition: transform 0.3s ease-in-out;
-  flex-shrink: 0;
+  scroll-snap-align: center;
 }
 
 .youtube-card:hover {
@@ -50,36 +61,83 @@
   border: none;
 }
 
-/* Mobile view → carousel */
+/* Navigation arrows */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(250, 237, 37, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-arrow:hover {
+  background: rgba(250, 237, 37, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-arrow::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+}
+
+.scroll-arrow.left {
+  left: 10px;
+}
+
+.scroll-arrow.left::before {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+
+.scroll-arrow.right {
+  right: 10px;
+}
+
+.scroll-arrow.right::before {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
+
+/* Hide scrollbar on all devices */
+.youtube-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.youtube-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .youtube-section {
-    padding: 60px 0; /* Remove horizontal padding on mobile */
+    padding: 60px 0;
   }
 
   .youtube-grid {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     gap: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: flex-start;
   }
 
   .youtube-card {
+    flex: 0 0 280px;
     max-width: 280px;
-    min-width: 280px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
   }
 
-  /* Hide scrollbar */
-  .youtube-grid::-webkit-scrollbar {
+  /* Hide arrows on mobile */
+  .scroll-arrow {
     display: none;
-  }
-  .youtube-grid {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 }

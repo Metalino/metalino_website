@@ -39,9 +39,9 @@
 
 .navbar a, .navbar li {
   color: #faed25;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
@@ -101,7 +101,7 @@
   .navbar {
     position: fixed;
     top: 10vh;
-    right: -40px;
+    right: -48px;
     width: 100%;
     height: 0;
     background: #000000;
@@ -125,7 +125,7 @@
 
   .navbar li {
     margin-left: 2rem;
-    font-size: 2rem;
+    font-weight: 400;
     color: #faed25;
     
   }

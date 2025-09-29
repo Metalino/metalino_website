@@ -19,9 +19,10 @@ const Navbar = () => {
 
       <nav className={`navbar ${isOpen ? "open" : ""}`}>
       <ul>
-        <li><Link to="metalino/">Home</Link></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/team">Our Team</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
     </nav>

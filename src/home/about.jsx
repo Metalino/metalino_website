@@ -4,7 +4,7 @@ import "./about.css";
 const AboutSection = () => {
   return (
     <section className="about">
-      <div className="about-container">
+      <div className="about-container_h">
         <div className="about-text">
           <h2>About us</h2>
           <p>At Metalino , we help businesses grow with smart advertising and digital marketing. From social media to SEO and paid campaigns, 

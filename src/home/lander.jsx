@@ -1,6 +1,6 @@
 import React from "react";
 import "./lander.css";
-import gif from "../assets/g1.gif";
+import gif from "../assets/animate.gif";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Lander = () => {
