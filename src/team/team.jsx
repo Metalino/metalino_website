@@ -10,35 +10,35 @@ import img5 from "../assets/team5.avif";
 const Team = () => {
   const members = [
     {
-  name: "Name",
+  name: "Vignesh Manikandan",
   role: "Founder - Creative Head",
   img: img3,
   desc: "Shapes the brand’s creative direction, turning bold ideas into powerful visual and storytelling campaigns.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
 },
 {
-  name: "Name",
+  name: "Maheswaran",
   role: "Founder - Director",
   img: img1,
   desc: "Oversees strategy and execution, ensuring every project aligns with the company’s vision and delivers measurable impact.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
 },
 {
-  name: "Name",
+  name: "Malavika",
   role: "Production Head",
   img: img5,
   desc: "Leads production with precision, creating high-quality content that resonates with audiences and elevates brand identity.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
 },
 {
-  name: "Name",
+  name: "V. PremKumar",
   role: "Social Media Manager",
   img: img2,
   desc: "Drives brand growth online by crafting engaging content, building communities, and fostering meaningful interactions.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
 },
 {
-  name: "Name",
+  name: "Akshaya Ramaseshan",
   role: "Creative Consultant and Stylist",
   img: img4,
   desc: "Transforms concepts into compelling visuals through styling and design, enhancing the overall creative appeal of campaigns.",

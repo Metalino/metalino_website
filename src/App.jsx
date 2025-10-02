@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Navbar from "./home/navbar.jsx";
 import Lander from "./home/lander.jsx";
@@ -11,6 +13,18 @@ import Contact from "./contact/contact.jsx";
 import About from "./about/aboutpage.jsx";
 import Team from "./team/team.jsx";
 import ServicePage from "./service_page/service_page.jsx";
+
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 
 function HomePage() {
   return (
@@ -69,6 +83,7 @@ function Service_Page() {
 function App() {
   return (
     <Router basename="/metalino_web">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/contact" element={<ContactPage/>} />

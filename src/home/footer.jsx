@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
-import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaInstagram,FaWhatsapp } from "react-icons/fa";
+import logo from "../assets/logo.svg";
 
 const Footer = () => {
   return (
@@ -29,6 +30,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
+          <img src={logo} alt="Metalino Logo" className="footer-logo" />
           <p className="footer-description">Made it to the end? That’s just the beginning for your brand. From creative campaigns to smart strategies, we’ve got your marketing covered.</p>
           
         </div>
@@ -39,7 +41,7 @@ const Footer = () => {
         {/* Column 2 */}
         <div className="footer-column">
           <div className="socials">
-            <a href="#"><FaTwitter /></a>
+            <a href="https://wa.me/917550325126?text=Hello%20I%20want%20to%20know%20more!"><FaWhatsapp /></a>
             <a href="#"><FaLinkedin /> </a>
             <a href="https://www.instagram.com/metalino.madras?utm_source=ig_web_button_share_sheet&igsh=MWlicXV2ZmIzcTFvYg=="><FaInstagram /> </a>
           </div>
