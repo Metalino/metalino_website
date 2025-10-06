@@ -9,7 +9,7 @@ input_folder = "src\\assets\\"
 quality = 50
 
 for filename in os.listdir(input_folder):
-    if filename.lower().endswith((".jpg", ".jpeg", ".png")):
+    if filename.lower().endswith((".jpg", ".jpeg", ".png",".ARW")):
         img_path = os.path.join(input_folder, filename)
 
         try:

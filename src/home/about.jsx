@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css";
+import aboutImage from "../assets/DSC04178.avif";
 
 const AboutSection = () => {
   return (
@@ -14,7 +15,7 @@ const AboutSection = () => {
         </div>
 
         <div className="about-image">
-          <img src="https://picsum.photos/400/400" alt="About me" />
+          <img src={aboutImage} alt="About me" />
         </div>
       </div>
     </section>

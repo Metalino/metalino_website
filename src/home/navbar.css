@@ -18,7 +18,7 @@
 .logo {
   height: 45px;
   cursor: pointer;
-  padding-left: 3rem;
+  padding-left: 1rem;
   transition: transform 0.3s ease;
 }
 
@@ -111,11 +111,17 @@
     transition: height 0.4s ease;
   }
 
+.logo {
+    padding-left: 0rem;
+  }
+
   .navbar.open {
     height: 100%; /* smooth dropdown */
     padding-top: 1rem;
     padding-bottom: 40px;
   }
+
+
 
   .navbar ul {
     padding-top: 40px;

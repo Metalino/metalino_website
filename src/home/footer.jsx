@@ -9,8 +9,15 @@ const Footer = () => {
     <div className="contactbtn">
         <button className="contact-btn">Contact Us</button>
     </div>
+
       <div className="footer-container">
         {/* Column 1 */}
+        <div className="footer-column">
+          <img src={logo} alt="Metalino Logo" className="footer-logo" />
+          <p className="footer-description">Made it to the end? That’s just the beginning for your brand. From creative campaigns to smart strategies, we’ve got your marketing covered.</p>
+          
+        </div>
+
         <div className="footer-column">
           <h3>Our Address</h3>
           <p>
@@ -27,12 +34,6 @@ const Footer = () => {
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
-        </div>
-
-        <div className="footer-column">
-          <img src={logo} alt="Metalino Logo" className="footer-logo" />
-          <p className="footer-description">Made it to the end? That’s just the beginning for your brand. From creative campaigns to smart strategies, we’ve got your marketing covered.</p>
-          
         </div>
         
       </div>
