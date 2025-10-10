@@ -6,6 +6,7 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaWhatsapp,
 } from "react-icons/fa";
 import "./Contact.css";
 
@@ -24,7 +25,7 @@ export default function Contact() {
         >
           <h2 className="section-title">Get in Touch</h2>
           <form
-            action="https://formsubmit.co/connect.metalino@outlook.com"
+            action="https://formsubmit.co/connectatmetalino@gmail.com"
             className="form"
             method="POST"
           >
@@ -53,8 +54,8 @@ export default function Contact() {
 
           <div className="info-item">
             <FaEnvelope className="icon email" />
-            <p>connect.metalino@outlook.com</p>
-          </div>
+              <p>connectatmetalino@gmail.com</p>
+            </div>
           <div className="info-item">
             <FaPhoneAlt className="icon phone" />
             <p>+91 7550325126</p>
@@ -65,9 +66,9 @@ export default function Contact() {
           </div>
 
           <div className="socials">
-            <a href="#"><FaFacebook /></a>
+            <a href="https://www.facebook.com/share/1Beox4Nn6D/"><FaFacebook /></a>
             <a href="https://www.instagram.com/metalino.madras"><FaInstagram /></a>
-            <a href="#"><FaLinkedin /></a>
+            <a href="https://wa.me/917550325126?text=Hello%20I%20want%20to%20know%20more!"><FaWhatsapp /></a>
           </div>
 
           

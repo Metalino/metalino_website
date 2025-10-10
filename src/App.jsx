@@ -82,7 +82,7 @@ function Service_Page() {
 
 function App() {
   return (
-    <Router basename="/metalino_website">
+    <Router>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage/>} />

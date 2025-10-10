@@ -28,8 +28,10 @@ const YouTubeSection = () => {
         
         <div className="youtube-grid" ref={gridRef}>
           <div className="youtube-card">
+            
+            {/* removed video https://youtube.com/embed/dJebcmKZ5gI*/}
             <iframe
-              src="https://youtube.com/embed/dJebcmKZ5gI"
+              src="https://youtube.com/embed/fmST-TVypgs"
               title="YouTube video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -49,7 +51,7 @@ const YouTubeSection = () => {
           
              <div className="youtube-card">
             <iframe
-              src="https://youtube.com/embed/dJebcmKZ5gI"
+              src="https://youtube.com/embed/fmST-TVypgs"
               title="YouTube video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
