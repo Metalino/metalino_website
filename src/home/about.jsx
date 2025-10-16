@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import aboutImage from "../assets/DSC04178.avif";
+import aboutImage from "../assets/about.avif";
 
 const AboutSection = () => {
   return (

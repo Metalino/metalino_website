@@ -16,6 +16,22 @@ const YouTubeSection = () => {
     }
   };
 
+  const urls = [
+    {video: "https://www.youtube.com/embed/fmST-TVypgs", title: "video1"},
+    //{video: "https://www.youtube.com/embed/FQLUTU8x18o", title: "video2"},
+    //{video: "https://www.youtube.com/embed/amjc_iw3448", title: "video3"},
+    {video: "https://www.youtube.com/embed/DKEdqZ6fkTg", title: "video4"},
+    //{video: "https://www.youtube.com/embed/l_PqCc18bd4", title: "video5"},
+    {video: "https://www.youtube.com/embed/we3gfBtI9Xc", title: "video6"},
+    {video: "https://www.youtube.com/embed/NMvWSOvnrqY", title: "video7"},
+    {video: "https://www.youtube.com/embed/sShFX-BZgho", title: "video8"},
+    {video: "https://www.youtube.com/embed/J0ZQlVKKHp0", title: "video9"},
+    {video: "https://www.youtube.com/embed/R_CV9YIcFw4", title: "video10"}
+  ];
+
+  // Duplicate the array for infinite loop
+  const duplicatedUrls = [...urls, ...urls];
+
   return (
     <section className="youtube-section">
       <h2 className="youtube-title">Our work</h2>
@@ -26,67 +42,19 @@ const YouTubeSection = () => {
           aria-label="Scroll left"
         ></button>
         
-        <div className="youtube-grid" ref={gridRef}>
-          <div className="youtube-card">
-            
-            {/* removed video https://youtube.com/embed/dJebcmKZ5gI*/}
-            <iframe
-              src="https://youtube.com/embed/fmST-TVypgs"
-              title="YouTube video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          
-          <div className="youtube-card">
-            <iframe
-              src="https://www.youtube.com/embed/kYU2erRrs0w"
-              title="YouTube video 2"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          
-             <div className="youtube-card">
-            <iframe
-              src="https://youtube.com/embed/fmST-TVypgs"
-              title="YouTube video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-
-          <div className="youtube-card">
-            <iframe
-              src="https://www.youtube.com/embed/kYU2erRrs0w"
-              title="YouTube video 4"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          
-          <div className="youtube-card">
-            <iframe
-              src="https://www.youtube.com/embed/O8_h-uInRt0"
-              title="YouTube video 5"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          
-          <div className="youtube-card">
-            <iframe
-              src="https://www.youtube.com/embed/7e2ZhXDO_dE"
-              title="YouTube video 6"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+        <div className="youtube-grid-wrapper">
+          <div className="youtube-grid" ref={gridRef}>
+            {duplicatedUrls.map((videos, index) => (
+              <div className="youtube-card" key={index}>
+                <iframe
+                  src={videos.video}
+                  title={`${videos.title}-${index}`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
           </div>
         </div>
 

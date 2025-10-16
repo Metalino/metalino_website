@@ -141,3 +141,30 @@
     display: none;
   }
 }
+
+.youtube-grid-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.youtube-grid {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  animation: slide 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.youtube-grid:hover {
+  animation-play-state: paused;
+}
