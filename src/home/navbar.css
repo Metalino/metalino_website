@@ -18,7 +18,7 @@
 .logo {
   height: 45px;
   cursor: pointer;
-  padding-left: 1rem;
+  padding-left: 3rem;
   transition: transform 0.3s ease;
 }
 
@@ -42,6 +42,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   text-decoration: none;
   font-size: 1.4rem;
+  font-weight: 600;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
@@ -112,7 +113,7 @@
   }
 
 .logo {
-    padding-left: 0rem;
+    padding-left: 2rem;
   }
 
   .navbar.open {
@@ -131,9 +132,14 @@
 
   .navbar li {
     margin-left: 2rem;
-    font-weight: 400;
+    font-weight: 600;
     color: #faed25;
     
+  }
+
+  .navbar a{
+    font-size: 1.8rem;
+    color: #faed25;
   }
 
   .navbar li:hover {

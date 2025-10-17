@@ -2,12 +2,15 @@ import React from "react";
 import "./footer.css";
 import { FaTwitter, FaLinkedin, FaInstagram,FaWhatsapp, FaFacebookF } from "react-icons/fa";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer">
     <div className="contactbtn">
-        <button className="contact-btn">Contact Us</button>
+        <button className="contact-btn" onClick={() => navigate("/contact")}>Contact Us</button>
     </div>
 
       <div className="footer-container">

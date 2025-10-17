@@ -57,7 +57,7 @@
     height: 70vh;
   }
   .gif-container img {
-    height: 70vh;
+    height: 60vh;
     max-width: auto;
     object-fit: cover;
   }

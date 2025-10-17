@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import  logo from "../assets/logo.svg";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="navbar-container">
-      <img src={logo} className="logo" alt="Logo" />
+      <img src={logo} className="logo" alt="Logo" onClick={() => navigate("/")} />
 
       {/* Hamburger icon */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
