@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./lander.css";
-import gif from "../assets/LOGO.avif";
+import gif from "../assets/logo.gif";
 import fallbackImage from "../assets/land.avif";
-import mobileImage from "../assets/mlogo.avif"; // <-- your mobile-specific image
+import mobileImage from "../assets/mlogo.gif"; // <-- your mobile-specific image
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const Lander = () => {

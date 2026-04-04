@@ -26,12 +26,17 @@ export default function Contact() {
           <h2 className="section-title">Get in Touch</h2>
           <form
             action="https://formsubmit.co/connectatmetalino@gmail.com"
-            className="form"
             method="POST"
+            className="form"
           >
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" rows="4" required></textarea>
+            {/* FormSubmit settings */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -40,6 +45,7 @@ export default function Contact() {
               Send Message
             </motion.button>
           </form>
+
         </motion.div>
 
         {/* Contact Info */}

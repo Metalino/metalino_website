@@ -11,18 +11,18 @@ const Team = () => {
   const members = [
     {
   name: "Vignesh Manikandan",
-  role: "Founder - Creative Head",
+  role: "Content and operations lead",
   img: img3,
   desc: "Shapes the brand’s creative direction, turning bold ideas into powerful visual and storytelling campaigns.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
 },
-{
+/*{
   name: "Maheswaran",
   role: "Founder - Director",
   img: img1,
   desc: "Oversees strategy and execution, ensuring every project aligns with the company’s vision and delivers measurable impact.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
-},
+},*/
 {
   name: "Malavika",
   role: "Production Head",
