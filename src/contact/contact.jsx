@@ -42,7 +42,7 @@ export default function Contact() {
               whileTap={{ scale: 0.95 }}
               className="send-btn"
             >
-              Send Message
+              Connect with us
             </motion.button>
           </form>
 
