@@ -60,11 +60,11 @@ export default function Contact() {
 
           <div className="info-item">
             <FaEnvelope className="icon email" />
-              <p>connectatmetalino@gmail.com</p>
+              <p>connect@metalino.in</p>
             </div>
           <div className="info-item">
             <FaPhoneAlt className="icon phone" />
-            <p>+91 7550325126</p>
+            <p>+91 7200533967</p>
           </div>
           <div className="info-item">
             <FaMapMarkerAlt className="icon location" />
@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="socials">
             <a href="https://www.facebook.com/share/1Beox4Nn6D/"><FaFacebook /></a>
             <a href="https://www.instagram.com/metalino.madras"><FaInstagram /></a>
-            <a href="https://wa.me/917550325126?text=Hello%20I%20want%20to%20know%20more!"><FaWhatsapp /></a>
+            <a href="https://wa.me/917200533967?text=Hello%20I%20want%20to%20know%20more!"><FaWhatsapp /></a>
           </div>
 
           
