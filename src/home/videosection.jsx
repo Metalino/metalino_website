@@ -16,18 +16,19 @@ const YouTubeSection = () => {
     }
   };
 
-  const urls = [
-    {video: "https://www.youtube.com/embed/fmST-TVypgs", title: "video1"},
-    //{video: "https://www.youtube.com/embed/FQLUTU8x18o", title: "video2"},
-    //{video: "https://www.youtube.com/embed/amjc_iw3448", title: "video3"},
-    {video: "https://www.youtube.com/embed/DKEdqZ6fkTg", title: "video4"},
-    //{video: "https://www.youtube.com/embed/l_PqCc18bd4", title: "video5"},
-    {video: "https://www.youtube.com/embed/we3gfBtI9Xc", title: "video6"},
-    {video: "https://www.youtube.com/embed/NMvWSOvnrqY", title: "video7"},
-    {video: "https://www.youtube.com/embed/sShFX-BZgho", title: "video8"},
-    {video: "https://www.youtube.com/embed/J0ZQlVKKHp0", title: "video9"},
-    {video: "https://www.youtube.com/embed/R_CV9YIcFw4", title: "video10"}
-  ];
+const urls = [
+  { video: "https://www.youtube.com/embed/BZJOxRHL-7M", title: "video1" },
+  { video: "https://www.youtube.com/embed/FfmsgrALkbM", title: "video2" },
+  { video: "https://www.youtube.com/embed/g_30Jcar0xI", title: "video3" },
+  { video: "https://www.youtube.com/embed/znNojQO1SBo", title: "video4" },
+  { video: "https://www.youtube.com/embed/mH-sv1KvpH4", title: "video5" },
+  { video: "https://www.youtube.com/embed/D0HEHip0Rm4", title: "video6" },
+  { video: "https://www.youtube.com/embed/JOYHASwYi4c", title: "video7" },
+  { video: "https://www.youtube.com/embed/Gt4IABLQQKo", title: "video8" },
+  { video: "https://www.youtube.com/embed/P0YUorymQAk", title: "video9" },
+  { video: "https://www.youtube.com/embed/ZP7871y8UxM", title: "video10" },
+  { video: "https://www.youtube.com/embed/fjPjbU-9oa8", title: "video11" }
+];
 
   // Duplicate the array for infinite loop
   const duplicatedUrls = [...urls, ...urls];
