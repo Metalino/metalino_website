@@ -6,6 +6,8 @@ import img2 from "../assets/team2.avif";
 import img3 from "../assets/team3.avif";
 import img4 from "../assets/team4.avif";
 import img5 from "../assets/team5.avif";
+import img6 from "../assets/team6.avif";
+import img7 from "../assets/team7.avif";
 
 const Team = () => {
   const members = [
@@ -44,6 +46,21 @@ const Team = () => {
   desc: "Transforms concepts into compelling visuals through styling and design, enhancing the overall creative appeal of campaigns.",
   socials: { linkedin: "#", twitter: "#", instagram: "#" },
 },
+{
+  name: "Raja Prakash",
+  role: "Editor",
+  img: img6,
+  desc: "Creative Video Editor and VFX Artist with expertise in DaVinci Resolve, Adobe Premiere Pro, After Effects, and VFX compositing. Experienced in delivering high-quality commercial videos, visual effects, color grading, and cinematic content for brands and advertising campaigns.",
+  socials: { linkedin: "#", twitter: "#", instagram: "#" },
+},
+{
+  name: "Srijith",
+  role: "Editor",
+  img: img7,
+  desc: "Video Editor specializing in Adobe Premiere Pro and After Effects. Skilled in creating engaging video content, seamless edits, motion graphics, and visual storytelling for digital platforms, advertisements, and brand campaigns.",
+  socials: { linkedin: "#", twitter: "#", instagram: "#" },
+},
+
 
   ];
 
