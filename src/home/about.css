@@ -21,21 +21,31 @@
 
 .about-text h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
+  text-align: center;
 }
 
 .about-text h2::after {
   content: "";
   position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: #faed25;
-  border-radius: 2px;
-}
 
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: -12px;
+
+  width: 80px;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #faed25,
+    #faed70
+  );
+
+  border-radius: 50px;
+}
 .about-text p {
 
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

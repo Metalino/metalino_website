@@ -11,8 +11,9 @@ const navigate = useNavigate();
       <div className="about-container_h">
         <div className="about-text">
           <h2>About us</h2>
-          <p>At Metalino , we help businesses grow with smart advertising and digital marketing. From social media to SEO and paid campaigns, 
-          we craft strategies that deliver real results. Creative, data-driven, and focused on your success - that’s who we are.
+          <p>Metalino helps brands grow through creative branding, compelling video production,
+engaging social media content, and result-driven marketing. We turn ideas into impactful
+stories that connect, inspire, and deliver results.
           </p>
           <button className="about-btn" onClick={() => navigate("/contact")}>Let’s Connect</button>
         </div>

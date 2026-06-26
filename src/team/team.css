@@ -1,37 +1,34 @@
 .team-page {
   min-height: 100vh;
   background: #030303;
-  padding: 60px 20px;
+  padding: 80px 20px;
   font-family: "Inter", sans-serif;
-  color: #000000;
   text-align: center;
-  margin-top: 1.5rem;
 }
 
 .team-title {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
+  color: #fff;
   margin-bottom: 15px;
-  color: #ffffff;
 }
 
 .team-title::after {
   content: "";
   display: block;
-  height: 4px;
   width: 7rem;
-  margin: 12px auto 0;
+  height: 4px;
+  margin: 15px auto 0;
   background: #f6e719;
-  border-radius: 4px;
-  margin-bottom: 4rem;
+  border-radius: 50px;
 }
 
 .team-subtitle {
-  font-size: 1.2rem;
-  color: #e7e7e7;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #d1d5db;
+  max-width: 750px;
+  margin: 2rem auto 4rem;
+  line-height: 1.8;
 }
 
 .team-subtitle span {
@@ -42,83 +39,152 @@
 /* Grid */
 .team-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 /* Card */
 .team-card {
-  background: #101010;
-  border-radius: 16px;
-  padding: 25px 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(246, 231, 25, 0.12);
+  backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+  padding: 30px 25px;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -80px;
+  right: -80px;
+
+  background: radial-gradient(
+    circle,
+    rgba(246, 231, 25, 0.15),
+    transparent 70%
+  );
+
+  transition: all 0.4s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-8px);
-  background: #202020;
+  transform: translateY(-10px);
+
+  border-color: rgba(246, 231, 25, 0.4);
+
+  box-shadow:
+    0 20px 40px rgba(246, 231, 25, 0.08),
+    0 0 20px rgba(246, 231, 25, 0.05);
 }
 
+.team-card:hover::before {
+  transform: scale(1.3);
+}
+
+/* Image */
 .team-card img {
   width: 220px;
   height: 220px;
-  border-radius: 10%;
   object-fit: cover;
-  margin-bottom: 15px;
+
+  border-radius: 18px;
+
+  border: 3px solid rgba(246, 231, 25, 0.25);
+
+  margin-bottom: 20px;
+
+  transition: all 0.4s ease;
 }
 
+.team-card:hover img {
+  transform: scale(1.03);
+  border-color: #f6e719;
+}
+
+/* Name */
 .team-card h2 {
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-  color: #f6e716;
+  font-size: 1.4rem;
+  color: #f6e719;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
+/* Role */
 .team-card h4 {
   font-size: 1rem;
-  color: #f6f6f6;
-  margin-bottom: 15px;
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
+/* Description */
 .team-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
   font-size: 0.95rem;
-  color: #f6f6f6;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  margin-bottom: 25px;
 }
 
 /* Socials */
 .team-socials {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .team-socials a {
-  font-size: 1.3rem;
-  color: #777;
-  transition: color 0.3s ease, transform 0.2s ease;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(246, 231, 25, 0.08);
+  border: 1px solid rgba(246, 231, 25, 0.15);
+
+  color: #f6e719;
+  font-size: 1.1rem;
+
+  transition: all 0.3s ease;
 }
 
 .team-socials a:hover {
-  color: #d6c913;
-  transform: scale(1.2);
+  background: #f6e719;
+  color: #000;
+  transform: translateY(-3px);
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px) {
-  .team-title {
-    font-size: 2.2rem;
+  .team-page {
+    padding: 60px 20px;
   }
 
-  .team-subtitle {
-    font-size: 1rem;
-    padding: 0 10px;
+  .team-container {
+    gap: 25px;
   }
 
   .team-card {
-    padding: 20px;
+    padding: 25px 20px;
+  }
+
+  .team-card img {
+    width: 180px;
+    height: 180px;
   }
 }
