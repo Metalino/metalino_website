@@ -5,35 +5,6 @@ import { useNavigate } from "react-router-dom";
 const About = () => {
   const [hoveredMember, setHoveredMember] = useState(null);
   const navigate = useNavigate();
-  const team = [
-    {
-      name: "John Doe",
-      role: "Founder & CEO",
-      description: "Visionary leader with 15+ years in digital strategy. Transforms complex challenges into breakthrough solutions.",
-      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop&crop=face",
-      gradient: "blue-purple",
-      skills: ["Strategy", "Leadership", "Innovation"],
-      experience: "15+ Years"
-    },
-    {
-      name: "Jane Smith",
-      role: "Marketing Head",
-      description: "Data-driven marketing expert specializing in growth hacking and brand transformation for global audiences.",
-      img: "https://images.unsplash.com/photo-1494790108755-2616c04b9f55?w=300&h=400&fit=crop&crop=face",
-      gradient: "pink-orange",
-      skills: ["Growth Marketing", "Analytics", "Brand Strategy"],
-      experience: "12+ Years"
-    },
-    {
-      name: "Alex Johnson",
-      role: "Creative Director",
-      description: "Award-winning designer creating immersive digital experiences that captivate and convert audiences worldwide.",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face",
-      gradient: "green-teal",
-      skills: ["UI/UX Design", "Creative Direction", "Brand Identity"],
-      experience: "10+ Years"
-    }
-  ];
 
   return (
     <div className="about-container">
