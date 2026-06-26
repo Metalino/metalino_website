@@ -1,17 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./services.css";
-import { FaChartLine, FaBullhorn, FaSearch, FaPenFancy, FaLaptopCode, FaChartPie, FaTv, FaUsers } from "react-icons/fa";
+import {
+  FaPalette,
+  FaVideo,
+  FaFilm,
+  FaHashtag,
+  FaBullhorn,
+  FaMagic,
+  FaPlayCircle,
+  FaCalendarAlt,
+  FaLaptopCode,
+  FaGem,
+
+} from "react-icons/fa";
 
 const services = [
-  { title: "Social Media Marketing", icon: <FaBullhorn /> },
-  { title: "Search Engine Optimization (SEO)", icon: <FaSearch /> },
-  { title: "Content Marketing", icon: <FaPenFancy /> },
-  { title: "Branding & Creative Design", icon: <FaChartLine /> },
-  { title: "Website Design & Development", icon: <FaLaptopCode /> },
-  { title: "Analytics & Reporting", icon: <FaChartPie /> },
-  { title: "TV Commercials", icon: <FaTv /> },
-  { title: "Influencer Marketing", icon: <FaUsers /> },
+  { title: "Branding", icon: <FaGem /> },
+  { title: "Video Production", icon: <FaVideo /> },
+  { title: "Ad Films", icon: <FaFilm /> },
+  { title: "Social Media Content", icon: <FaHashtag /> },
+  { title: "Marketing", icon: <FaBullhorn /> },
+  { title: "2D Animations", icon: <FaMagic /> },
+  { title: "Motion Graphics", icon: <FaPlayCircle /> },
+  { title: "Events", icon: <FaCalendarAlt /> },
+  { title: "Website Development", icon: <FaLaptopCode /> },
 ];
 
 const ServicesSection = () => {
@@ -21,16 +34,27 @@ const ServicesSection = () => {
       <div className="services-grid">
         {services.map((service, index) => (
           <motion.div
-            key={index}
-            className="service-card"
-            initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <div className="icon">{service.icon}</div>
-            <h3>{service.title}</h3>
-          </motion.div>
+  key={index}
+  className="service-card"
+  initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.5, delay: index * 0.05 }}
+  viewport={{ once: true }}
+  whileHover={{
+    y: -10,
+    scale: 1.03,
+  }}
+>
+  <div className="service-card-glow"></div>
+
+  <div className="icon">
+    {service.icon}
+  </div>
+
+  <h3>{service.title}</h3>
+
+  <span className="service-line"></span>
+</motion.div>
         ))}
       </div>
     </section>

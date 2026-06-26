@@ -41,12 +41,13 @@ const Lander = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://wa.me/917550325126?text=Hello%20I%20want%20to%20know%20more!"
+            href="https://wa.me/917200533967?text=Hi%20Metalino%21%20I%27m%20interested%20in%20your%20services.%20Could%20you%20please%20share%20your%20pricing%20and%20more%20details%3F"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="Contact us on WhatsApp"
           >
             <FaWhatsapp />
-          </a>
+          </a>      
         </div>
       </div>
     </div>

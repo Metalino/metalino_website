@@ -45,8 +45,14 @@ const Footer = () => {
         {/* Column 2 */}
         <div className="footer-column">
           <div className="socials">
-            <a href="https://wa.me/917550325126?text=Hello%20I%20want%20to%20know%20more!"><FaWhatsapp /></a>
-            <a href="https://www.facebook.com/share/1Beox4Nn6D/"><FaFacebookF /> </a>
+<a
+  href="https://wa.me/917200533967?text=Hi%20Metalino%21%20I%27m%20interested%20in%20your%20services.%20Could%20you%20please%20share%20your%20pricing%20and%20more%20details%3F"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contact us on WhatsApp"
+>
+  <FaWhatsapp />
+</a>            <a href="https://www.facebook.com/share/1Beox4Nn6D/"><FaFacebookF /> </a>
             <a href="https://www.instagram.com/metalino.madras?utm_source=ig_web_button_share_sheet&igsh=MWlicXV2ZmIzcTFvYg=="><FaInstagram /> </a>
           </div>
         </div>

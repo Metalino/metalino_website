@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./aboutpage.css";
 import { useNavigate } from "react-router-dom";
+import  logo from "../assets/logo.svg";
 
 const About = () => {
-  const [hoveredMember, setHoveredMember] = useState(null);
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   return (
     <div className="about-container">
@@ -17,15 +18,14 @@ const About = () => {
           <div className="floating-element floating-element-2"></div>
           
           <div className="hero-content">
-            <div className="hero-text">
-              <h1 className="brand-name">Metalino</h1>
-              <div className="brand-line"></div>
+            <div className="hero-img-container">
+              <img src={logo} alt="Metalino Logo" className="hero-logo" />
             </div>
             
             <p className="tagline">
-              Digital marketing that delivers{" "}
-              <span className="highlight-text">extraordinary results</span>
-              {" "}— Let's grow your brand online with cutting-edge strategies
+            <span className="highlight-text">Metalino</span>
+              {" "} transforms ideas into impactful brands, content, and campaigns
+            that drive growth.
             </p>
             
             <div className="hero-buttons">
@@ -37,22 +37,13 @@ const About = () => {
         {/* About Section */}
         <section className="about-section">
           <div className="about-content">
-            <div className="about-text">
               <div className="section-header">
                 <h2 className="section-title">About Us</h2>
-              </div>
               
               <p className="about-description">
-                Metalino is a cutting-edge digital marketing agency where creativity meets strategy. 
-                We specialize in transforming brands through innovative digital experiences that 
-                captivate audiences and drive measurable results.
-              </p>
-              
-              <p className="about-description">
-                Whether you're a startup looking to make your mark or an established brand 
-                seeking digital transformation, we craft bespoke solutions that elevate your 
-                presence and create lasting connections with your audience.
-              </p>
+                Metalino helps brands grow through creative branding, compelling video production,
+engaging social media content, and result-driven marketing. We turn ideas into impactful
+stories that connect, inspire, and deliver results.</p>
               
               <div className="stats-grid">
                 <div className="stat-item">
